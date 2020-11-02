@@ -36,7 +36,7 @@ namespace ModbusPCL
             //
             var steps = new List<PinValue[]>() {step1, step2, step3, step4, step5, step6, step7, step8};
 
-            while (inpin<200)
+            while (inpin<5000)
             {
                 foreach (var item in steps)
                 {
@@ -44,7 +44,7 @@ namespace ModbusPCL
                     GPIO.Write(I[1], item[2]);
                     GPIO.Write(I[2], item[1]);
                     GPIO.Write(I[3], item[0]);
-                    Thread.Sleep(1);
+                    Thread.Sleep(TimeSpan.FromMilliseconds(0.5));
                 }
                 inpin++;
             }
