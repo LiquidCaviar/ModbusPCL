@@ -11,7 +11,7 @@ namespace ModbusPCL
             var GPIO = new GpioController(PinNumberingScheme.Board);
 
             //inputs
-            var inpin = 2;
+            var inpin = 5;
             //outputs
             var outpin = 3;
 
