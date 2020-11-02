@@ -14,3 +14,4 @@ C:\Users\Thinkpad\Documents\GitHub\ModbusPCL\ModbusPCL\obj\Debug\netcoreapp3.1\M
 C:\Users\Thinkpad\Documents\GitHub\ModbusPCL\ModbusPCL\obj\Debug\netcoreapp3.1\ModbusPCL.dll
 C:\Users\Thinkpad\Documents\GitHub\ModbusPCL\ModbusPCL\obj\Debug\netcoreapp3.1\ModbusPCL.pdb
 C:\Users\Thinkpad\Documents\GitHub\ModbusPCL\ModbusPCL\obj\Debug\netcoreapp3.1\ModbusPCL.genruntimeconfig.cache
+C:\Users\Thinkpad\Documents\GitHub\ModbusPCL\ModbusPCL\obj\Debug\netcoreapp3.1\ModbusPCL.csprojAssemblyReference.cache
