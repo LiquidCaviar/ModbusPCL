@@ -42,7 +42,7 @@ namespace ModbusPCL
                 GPIO.Write(I[1],item[1]);
                 GPIO.Write(I[2],item[2]);
                 GPIO.Write(I[3],item[3]);
-                Thread.Sleep(550);
+                Thread.Sleep(350);
             }
 
             GPIO.ClosePin(I[0]);
