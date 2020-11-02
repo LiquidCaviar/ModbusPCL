@@ -5,4 +5,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstraction\Model\" />
+    <Folder Include="Abstraction\Service\" />
+    <Folder Include="Implementation\Model\" />
+    <Folder Include="Implementation\Service\" />
+  </ItemGroup>
+
 </Project>
