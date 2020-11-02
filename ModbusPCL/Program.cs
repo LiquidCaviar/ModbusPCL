@@ -38,11 +38,11 @@ namespace ModbusPCL
 
             foreach (var item in steps)
             {
-                GPIO.Write(I[0],item[0]);
-                GPIO.Write(I[1],item[1]);
-                GPIO.Write(I[2],item[2]);
-                GPIO.Write(I[3],item[3]);
-                Thread.Sleep(350);
+                GPIO.Write(I[0],item[3]);
+                GPIO.Write(I[1],item[2]);
+                GPIO.Write(I[2],item[1]);
+                GPIO.Write(I[3],item[0]);
+                Thread.Sleep(500);
             }
 
             GPIO.ClosePin(I[0]);
