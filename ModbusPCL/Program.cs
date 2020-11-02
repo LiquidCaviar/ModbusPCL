@@ -35,15 +35,18 @@ namespace ModbusPCL
             PinValue[] step8 = { PinValue.Low, PinValue.High, PinValue.High, PinValue.Low };
             //
             var steps = new List<PinValue[]>() {step1, step2, step3, step4, step5, step6, step7, step8};
-
-            foreach (var item in steps)
+            while (inpin>3)
             {
-                GPIO.Write(I[0],item[3]);
-                GPIO.Write(I[1],item[2]);
-                GPIO.Write(I[2],item[1]);
-                GPIO.Write(I[3],item[0]);
-                Thread.Sleep(500);
+                foreach (var item in steps)
+                {
+                    GPIO.Write(I[0], item[3]);
+                    GPIO.Write(I[1], item[2]);
+                    GPIO.Write(I[2], item[1]);
+                    GPIO.Write(I[3], item[0]);
+                    Thread.Sleep(500);
+                }
             }
+            
 
             GPIO.ClosePin(I[0]);
             GPIO.ClosePin(I[1]);
