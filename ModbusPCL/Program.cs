@@ -51,12 +51,12 @@ namespace ModbusPCL
                 }
                 inpin++;
             }
-            while (inpin < 2500)
+            while (inpin < 5000)
             {
-                
+                steps.Reverse();
                 foreach (var item in steps)
                 {
-                    item.Select(x => x = x == PinValue.High ? PinValue.Low : PinValue.High).ToList();
+                    //item.Select(x => x = x == PinValue.High ? PinValue.Low : PinValue.High).ToList();
                     GPIO.Write(I[0], item[3]);
                     GPIO.Write(I[1], item[2]);
                     GPIO.Write(I[2], item[1]);
