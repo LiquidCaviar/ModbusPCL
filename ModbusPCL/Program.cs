@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Device.Gpio;
 using System.Threading;
+ 
 
 namespace ModbusPCL
 {
@@ -10,6 +11,7 @@ namespace ModbusPCL
     {
         static void Main(string[] args)
         {
+            
             //testing....
             var GPIO = new GpioController(PinNumberingScheme.Board);
 
@@ -36,7 +38,7 @@ namespace ModbusPCL
             //
             var steps = new List<PinValue[]>() {step1, step2, step3, step4, step5, step6, step7, step8};
 
-            while (inpin<5000)
+            while (inpin<2500)
             {
                 foreach (var item in steps)
                 {
@@ -48,10 +50,23 @@ namespace ModbusPCL
                 }
                 inpin++;
             }
+            while (inpin < 2500)
+            {
+                steps.Reverse();
+                foreach (var item in steps)
+                {
+                    GPIO.Write(I[0], item[3]);
+                    GPIO.Write(I[1], item[2]);
+                    GPIO.Write(I[2], item[1]);
+                    GPIO.Write(I[3], item[0]);
+                    Thread.Sleep(1);
+                }
+                inpin++;
+            }
 
-                
-         
-            
+
+
+
 
             GPIO.ClosePin(I[0]);
             GPIO.ClosePin(I[1]);
